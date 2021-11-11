@@ -24,7 +24,7 @@ import GeneralContextProvider from 'context/GeneralContext';
 
 // Pages
 import Home from 'pages/Home.js';
-import Teams from 'pages/Teams.js';
+
 import Plans from 'pages/Plans.js';
 import Payment from 'pages/Payment.js';
 import About from 'pages/About.js';
@@ -44,7 +44,7 @@ ReactDOM.render(
 		<GeneralContextProvider>
 			<Switch>
 				<Route exact path="/" component={Home} />
-				<Route exact path="/team" component={Teams} />
+
 				<Route exact path="/plans" component={Plans} />
 				<Route exact path="/payment" component={Payment} />
 				<Route exact path="/about" component={About} />

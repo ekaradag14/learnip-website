@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "novus-global"
+  },
+  "targets": {
+    "novus-global": {
+      "hosting": {
+        "admin": [
+          "novus-viewer"
+        ],
+          "rewrites": [ {
+           "source": "**",
+            "destination": "/index.html"
+           } ]
+      }
+    }
+  }
+}

@@ -33,33 +33,7 @@ function CustomFooter({ ...rest }) {
 							))}
 						</List>
 					</div>
-					<div
-						style={{
-							marginRight: 'auto',
-							textAlign: 'left',
-							marginTop: 30,
-							marginBottom: 30,
-							display: 'flex',
-						}}
-					>
-						<div style={{ width: 400 }}>
-							<b style={{ display: 'block' }}>Contact Us</b>
-							<br />
-							<em>NOVUS MEDYA VE TEKNOLOJI ANONIM SIRKETI </em>
-							<p>
-								Maslak Mah. AOS 55. Sk. 42 Maslak B Blok No:4. İç kapı No:542
-								Sarıyer-Istanbul - 34485
-							</p>
-							<a
-								style={{ display: 'block' }}
-								target="__blank"
-								href="mailto:support@novus.press"
-							>
-								support@novus.press
-							</a>
-							<p>+90 212 988 05 88</p>
-						</div>
-					</div>
+
 					<div className={classes.root}>
 						<div className={classes.left}>
 							<a href={data.left.href} target="_blank" rel="noreferrer">

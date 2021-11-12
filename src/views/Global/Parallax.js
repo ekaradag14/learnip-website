@@ -5,10 +5,12 @@ import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 
 // core components
+import { Grid } from '@material-ui/core';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 import Parallax from 'components/Parallax/Parallax.js';
 import ShowcaseGif from 'assets/novus/main-product-showcase.gif';
+import HappyTurnip from 'assets/learnip/happy_turnip.svg';
 import headersStyle from 'assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js';
 
 import data from 'data/header.js';
@@ -23,32 +25,46 @@ function CustomParallax(props) {
 			image={props.image || require('assets/img/examples/city.jpg').default}
 			filter="dark"
 		>
-			<div className={classes.container}>
+			<div className={classes.container} style={{ margin: 'auto' }}>
 				<div style={{ height: window.screen.width < 400 ? 150 : 0 }}></div>
-				<GridContainer>
-					<GridItem xs={12} sm={5} md={5}>
-						<h1 className={classes.title}>{data.slider.title}</h1>
-						<h4>{data.slider.content}</h4>
-					</GridItem>
-					<GridItem
+				<Grid container>
+					<Grid
+						item
 						xs={12}
-						sm={6}
-						md={6}
+						sm={7}
+						md={7}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							alignContent: 'center',
+						}}
+					>
+						<div style={{ margin: 'auto' }}>
+							<h1 className={classes.title}>{data.slider.title}</h1>
+							<h4>{data.slider.content}</h4>
+						</div>
+					</Grid>
+					<Grid
+						item
+						xs={12}
+						sm={5}
+						md={5}
 						className={classNames(classes.mlAuto, classes.imgMobile)}
 					>
 						<div className={classes.iframeContainer}>
 							<img
-								src={ShowcaseGif}
+								height="400"
+								src={HappyTurnip}
 								style={{ borderRadius: 10 }}
 								frameBorder="0"
 								allow="encrypted-media"
 								allowFullScreen=""
-								title="Novus Writer"
+								title="Learnip"
 							/>
 						</div>
-					</GridItem>
+					</Grid>
 					<GridItem xs={12} sm={1} md={1} />
-				</GridContainer>
+				</Grid>
 			</div>
 		</Parallax>
 	);

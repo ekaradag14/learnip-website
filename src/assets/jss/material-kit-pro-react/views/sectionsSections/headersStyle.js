@@ -1,4 +1,4 @@
-import headerLinksStyle from "assets/jss/material-kit-pro-react/components/headerLinksStyle.js";
+import headerLinksStyle from 'assets/jss/material-kit-pro-react/components/headerLinksStyle.js';
 import {
 	container,
 	mrAuto,
@@ -6,90 +6,92 @@ import {
 	blackColor,
 	whiteColor,
 	hexToRgb,
-} from "assets/jss/material-kit-pro-react.js";
+} from 'assets/jss/material-kit-pro-react.js';
 
 const headersSection = (theme) => ({
 	...headerLinksStyle(theme),
 	sectionBlank: {
-		height: "70px",
-		display: "block",
+		height: '70px',
+		display: 'block',
 	},
 	container: {
 		...container,
-		zIndex: "2",
-		position: "relative",
-		"& h1, & h4, & h6": {
+		zIndex: '2',
+		position: 'relative',
+		'& h1, & h4, & h6': {
 			color: whiteColor,
 		},
 	},
 	conatinerHeader2: {
 		...container,
-		zIndex: "2",
-		position: "relative",
-		"& h1, & h4, & h6": {
+		zIndex: '2',
+		position: 'relative',
+		'& h1, & h4, & h6': {
 			color: whiteColor,
 		},
-		paddingTop: "25vh",
+		paddingTop: '25vh',
 	},
 	title,
 	pageHeader: {
-		position: "relative",
-		height: "100vh",
-		maxHeight: "1600px",
-		backgroundPosition: "50%",
-		backgroundSize: "cover",
-		margin: "0",
-		padding: "0",
-		border: "0",
-		display: "flex",
-		WebkitBoxAlign: "center",
-		MsFlexAlign: "center",
-		alignItems: "center",
-		"&:before": {
-			background: "rgba(" + hexToRgb(blackColor) + ", 0.5)",
+		position: 'relative',
+		height: '100vh',
+		maxHeight: '1600px',
+		backgroundPosition: '50%',
+		backgroundSize: 'cover',
+		margin: '0',
+		padding: '0',
+		border: '0',
+		display: 'flex',
+		WebkitBoxAlign: 'center',
+		MsFlexAlign: 'center',
+		alignItems: 'center',
+		'&:before': {
+			background: 'rgba(' + hexToRgb(blackColor) + ', 0.5)',
 		},
-		"&:after,&:before": {
-			position: "absolute",
-			zIndex: "1",
-			width: "100%",
-			height: "100%",
-			display: "block",
-			left: "0",
-			top: "0",
+		'&:after,&:before': {
+			position: 'absolute',
+			zIndex: '1',
+			width: '100%',
+			height: '100%',
+			display: 'block',
+			left: '0',
+			top: '0',
 			content: "''",
 		},
 	},
 	iframeContainer: {
-		"& > iframe": {
-			maxWidth: "100%",
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		'& > iframe': {
+			maxWidth: '100%',
 			boxShadow:
-				"0 16px 38px -12px rgba(" +
+				'0 16px 38px -12px rgba(' +
 				hexToRgb(blackColor) +
-				", 0.56), 0 4px 25px 0px rgba(" +
+				', 0.56), 0 4px 25px 0px rgba(' +
 				hexToRgb(blackColor) +
-				", 0.12), 0 8px 10px -5px rgba(" +
+				', 0.12), 0 8px 10px -5px rgba(' +
 				hexToRgb(blackColor) +
-				", 0.2)",
+				', 0.2)',
 		},
 	},
 	mrAuto,
-	imgMobile: {
-	},
+	imgMobile: {},
 	textCenter: {
-		textAlign: "center",
+		textAlign: 'center',
 	},
 	card: {
-		marginTop: "60px",
+		marginTop: '60px',
 	},
 	formControl: {
-		margin: "0",
-		padding: "8px 0 0 0",
+		margin: '0',
+		padding: '8px 0 0 0',
 	},
 	textRight: {
-		textAlign: "right",
+		textAlign: 'right',
 	},
 	button: {
-		margin: "0 !important",
+		margin: '0 !important',
 	},
 });
 

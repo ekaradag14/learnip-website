@@ -10,7 +10,7 @@ import SectionContent from 'views/Home/SectionContent.js';
 import SectionProjects from 'views/Home/SectionProjects.js';
 import SectionContacts from 'views/Home/SectionContacts.js';
 import SectionPartners from 'views/Home/SectionPartners.js';
-
+import fields from './fields.svg';
 import presentationStyle from 'assets/jss/material-kit-pro-react/views/presentationStyle.js';
 
 const useStyles = makeStyles(presentationStyle);
@@ -29,14 +29,12 @@ function Home({ location }) {
 		<div>
 			<Header
 				parallax={{
-					image: 'https://i.giphy.com/media/lbcLMX9B6sTsGjUmS3/giphy.webp',
+					image: fields,
 				}}
 			/>
 			<div className={classNames(classes.main, classes.mainRaised)}>
 				<SectionProjects />
 				<hr />
-				<SectionContent />
-				<SectionPartners />
 			</div>
 			<SectionContacts />
 			<Footer />

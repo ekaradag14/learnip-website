@@ -10,7 +10,7 @@ import SectionContent from 'views/Home/SectionContent.js';
 import SectionProjects from 'views/Home/SectionProjects.js';
 import SectionContacts from 'views/Home/SectionContacts.js';
 import SectionPartners from 'views/Home/SectionPartners.js';
-import fields from './fields.svg';
+import fields from 'assets/learnip/fields.svg';
 import presentationStyle from 'assets/jss/material-kit-pro-react/views/presentationStyle.js';
 
 const useStyles = makeStyles(presentationStyle);

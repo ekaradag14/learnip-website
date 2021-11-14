@@ -26,7 +26,7 @@ function CustomParallax(props) {
 			filter="dark"
 		>
 			<div className={classes.container} style={{ margin: 'auto' }}>
-				<div style={{ height: window.screen.width < 400 ? 150 : 0 }}></div>
+				<div style={{ height: window.screen.width < 600 ? 50 : 0 }}></div>
 				<Grid container>
 					<Grid
 						item
@@ -51,11 +51,21 @@ function CustomParallax(props) {
 						md={5}
 						className={classNames(classes.mlAuto, classes.imgMobile)}
 					>
-						<div className={classes.iframeContainer}>
+						<div
+							className={classes.iframeContainer}
+							style={{
+								display: 'flex',
+								alignContent: 'center',
+								height: '100%',
+							}}
+						>
 							<img
-								height="400"
 								src={HappyTurnip}
-								style={{ borderRadius: 10 }}
+								style={{
+									borderRadius: 10,
+									maxWidth: 400,
+									width: '60%',
+								}}
 								frameBorder="0"
 								allow="encrypted-media"
 								allowFullScreen=""

@@ -67,23 +67,35 @@ export default function Header(props) {
 	});
 	return (
 		<AppBar className={appBarClasses}>
-			<Toolbar className={classes.container}>
-				<Button className={classes.title}>
-					<Link to="/">
-						<img src={NovusWriter}></img>
-					</Link>
-				</Button>
+			<Toolbar
+				className={classes.container}
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+				}}
+			>
+				{false && (
+					<Button className={classes.title}>
+						<Link to="/">
+							<img src={NovusWriter}></img>
+						</Link>
+					</Button>
+				)}
+				<div className={classes.collapse}>
+					<div style={{ margin: 'auto', fontSize: 20 }}>
+						🎉 Install <b>Learnip</b> for your Chrome browser for free from{' '}
+						<a
+							href="https://www.google.com"
+							style={{ color: 'white', textDecoration: 'underline' }}
+						>
+							<b>here</b>
+						</a>
+						! 🎉
+					</div>
+				</div>
 				<Hidden smDown implementation="css" className={classes.hidden}>
 					<div className={classes.collapse}>{links}</div>
-				</Hidden>
-				<Hidden mdUp>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerToggle}
-					>
-						<Menu />
-					</IconButton>
 				</Hidden>
 			</Toolbar>
 			<Hidden mdUp implementation="js">

@@ -28,6 +28,7 @@ import Home from 'pages/Home.js';
 import Plans from 'pages/Plans.js';
 import Payment from 'pages/Payment.js';
 import About from 'pages/About.js';
+
 import DeliveryReturn from 'pages/DeliveryReturn.js';
 import PrivacySecurity from 'pages/PrivacySecurity.js';
 
@@ -48,6 +49,7 @@ ReactDOM.render(
 				<Route exact path="/plans" component={Plans} />
 				<Route exact path="/payment" component={Payment} />
 				<Route exact path="/about" component={About} />
+
 				<Route exact path="/delivery-return" component={DeliveryReturn} />
 				<Route exact path="/privacy-security" component={PrivacySecurity} />
 				<Route path="*">

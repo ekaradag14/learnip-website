@@ -8,7 +8,7 @@ import Code from '@material-ui/icons/Code';
 import Dashboard from '@material-ui/icons/Dashboard';
 import Timeline from '@material-ui/icons/Timeline';
 import Group from '@material-ui/icons/Group';
-
+import Hidden from '@material-ui/core/Hidden';
 // core components
 import { Grid } from '@material-ui/core';
 import GridContainer from 'components/Grid/GridContainer.js';
@@ -61,7 +61,7 @@ export default function SectionProjects({ ...rest }) {
 								justifyContent: 'space-between',
 							}}
 						>
-							<GridItem xs={12} sm={6} md={6} style={{ margin: 'auto' }}>
+							<GridItem xs={12} sm={12} md={6} style={{ margin: 'auto' }}>
 								<InfoArea
 									style={{ maxWidth: 'none' }}
 									className={classes.info4}
@@ -70,7 +70,7 @@ export default function SectionProjects({ ...rest }) {
 									iconHeight="70px"
 									icon={RocketTurnip}
 									title="Study at Your Own Pace"
-									description="AI cannot outperform humans for fact-checking. Yet. Check your facts with our novel Novus Crawler. Arguments in your article like quotes and metrics are automatically searched in trusted sources to un cover the truth. Then you get to choose what is informative about your content."
+									description="Set the pace you want to learn and keep it."
 									iconColor="rose"
 								/>
 								<InfoArea
@@ -78,6 +78,7 @@ export default function SectionProjects({ ...rest }) {
 									isIconSVG
 									iconWidth="70px"
 									iconHeight="70px"
+									iconOnRight
 									icon={WaterFlags}
 									title="Choose Languages"
 									description="Choose from many languages provided (More to come) and start learning right away. Become a turnipster to practice multiple languages at once."
@@ -97,7 +98,7 @@ export default function SectionProjects({ ...rest }) {
 							</GridItem>
 							<GridItem
 								xs={12}
-								sm={5}
+								sm={12}
 								md={5}
 								style={{
 									display: 'flex',
@@ -123,6 +124,7 @@ export default function SectionProjects({ ...rest }) {
 						style={{
 							width: '8%',
 							maxWidth: 150,
+							minWidth: 75,
 							marginLeft: 'auto',
 							right: '0.6%',
 
@@ -137,6 +139,7 @@ export default function SectionProjects({ ...rest }) {
 						style={{
 							width: '10%',
 							maxWidth: 200,
+							minWidth: 100,
 							marginLeft: 'auto',
 							marginTop: -200,
 							right: '5%',
@@ -151,6 +154,7 @@ export default function SectionProjects({ ...rest }) {
 						style={{
 							width: '10%',
 							maxWidth: 200,
+							minWidth: 100,
 							marginLeft: 'auto',
 							right: '11%',
 							marginTop: 400,
@@ -172,24 +176,26 @@ export default function SectionProjects({ ...rest }) {
 								justifyContent: 'space-between',
 							}}
 						>
-							<GridItem
-								xs={12}
-								sm={5}
-								md={5}
-								style={{ display: 'flex', flexDirection: 'column' }}
-							>
-								<img
-									src={ResultMockMobile}
-									style={{
-										marginTop: window.innerWidth > 1250 ? 130 : 0,
-										margin: 'auto',
-										borderRadius: 5,
-										padding: 40,
-									}}
-									alt="Novus Writer Product Screenshot"
-								/>
-							</GridItem>
-							<GridItem xs={12} sm={7} md={7}>
+							<Hidden smDown implementation="js">
+								<GridItem
+									xs={12}
+									sm={12}
+									md={5}
+									style={{ display: 'flex', flexDirection: 'column' }}
+								>
+									<img
+										src={ResultMockMobile}
+										style={{
+											marginTop: window.innerWidth > 1250 ? 130 : 0,
+											margin: 'auto',
+											borderRadius: 5,
+											padding: 40,
+										}}
+										alt="Learnip Results Mockup Image"
+									/>
+								</GridItem>
+							</Hidden>
+							<GridItem xs={12} sm={12} md={7} style={{ margin: 'auto' }}>
 								<InfoArea
 									className={classes.info4}
 									title="Find Your Droplets All Over The Internet"
@@ -206,6 +212,7 @@ export default function SectionProjects({ ...rest }) {
 									isIconSVG
 									iconWidth="70px"
 									iconHeight="70px"
+									iconOnRight
 									description="In seconds related to the firm's field. Just input your area of interests and wait for proposed outlines or new ideas. Variety of blog contents related with your input is right there in seconds. "
 									icon={TurnipCool}
 									iconColor="primary"
@@ -221,6 +228,25 @@ export default function SectionProjects({ ...rest }) {
 									icon={WaterStop}
 									iconColor="danger"
 								/>
+								<Hidden mdUp implementation="css" className={classes.hidden}>
+									<GridItem
+										xs={12}
+										sm={12}
+										md={5}
+										style={{ display: 'flex', flexDirection: 'column' }}
+									>
+										<img
+											src={ResultMockMobile}
+											style={{
+												marginTop: window.innerWidth > 1250 ? 130 : 0,
+												margin: 'auto',
+												borderRadius: 5,
+												padding: 40,
+											}}
+											alt="Novus Writer Product Screenshot"
+										/>
+									</GridItem>
+								</Hidden>
 							</GridItem>
 						</Grid>
 						<img
@@ -230,6 +256,7 @@ export default function SectionProjects({ ...rest }) {
 							style={{
 								width: '7%',
 								maxWidth: 150,
+								minWidth: 75,
 								marginLeft: 'auto',
 								left: '3%',
 								marginTop: 400,
@@ -244,6 +271,7 @@ export default function SectionProjects({ ...rest }) {
 							style={{
 								width: '10%',
 								maxWidth: 200,
+								minWidth: 100,
 								marginLeft: 'auto',
 								marginTop: 1500,
 								left: '5%',

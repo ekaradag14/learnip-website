@@ -67,7 +67,7 @@ $colors: map-merge(
 	$colors
 );
 
-$primary: $blue !default;
+$primary: #a12e75 !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -185,7 +185,7 @@ $paragraph-margin-bottom: 1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-	xs: 562,
+	xs: 562px,
 	sm: 768px,
 	md: 992px,
 	lg: 1200px,

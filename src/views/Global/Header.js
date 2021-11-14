@@ -30,53 +30,7 @@ function CustomHeader(props) {
 
 	return (
 		<div className="cd-section">
-			<Header
-				fixed
-				brand={data.title}
-				color={parallax ? 'transparent' : 'primary'}
-				changeColorOnScroll={{
-					height: 30,
-					color: 'novusMainBlue',
-				}}
-				links={
-					<div className={classes.collapse}>
-						<List
-							className={classes.list + ' ' + classes.mlAuto}
-							style={{ paddingBottom: 0 }}
-						>
-							{data.menu.map((elm, i) => (
-								<ListItem className={classes.listItem} key={i}>
-									<Button
-										className={classes.navLink}
-										color="transparent"
-										component={Link}
-										to={elm.href}
-									>
-										<b style={{ fontSize: 15 }}>{elm.title}</b>
-									</Button>
-								</ListItem>
-							))}
-						</List>
-						<List
-							className={classes.list + ' ' + classes.mlAuto}
-							style={{ paddingBottom: 0 }}
-						>
-							{data.social.map((elm, i) => (
-								<ListItem className={classes.listItem} key={i}>
-									<Button
-										color="transparent"
-										href={elm.href}
-										target="_blank"
-										className={`${classes.navLink} ${classes.navLinkJustIcon}`}
-									>
-										{elm.icon === 'linkedIn' && <LinkedInIcon />}
-									</Button>
-								</ListItem>
-							))}
-						</List>
-					</div>
-				}
-			/>
+			<Header fixed color={'primary'} />
 			{parallax ? <Parallax {...parallax} /> : <Box m={15} />}
 		</div>
 	);

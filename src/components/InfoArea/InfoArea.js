@@ -21,6 +21,7 @@ export default function InfoArea(props) {
 		isIconSVG,
 		iconWidth,
 		iconHeight,
+		iconOnRight = false,
 	} = props;
 	const classes = useStyles();
 	const iconWrapper = classNames({
@@ -47,19 +48,34 @@ export default function InfoArea(props) {
 	}
 	return (
 		<div className={infoAreaClasses}>
-			<div className={iconWrapper}>
-				{isIconSVG ? (
-					<img
-						style={{ width: iconWidth, height: iconHeight }}
-						src={props.icon}
-					/>
-				) : (
-					icon
+			<h4 className={classes.title}>{title}</h4>
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'row',
+					alignContent: 'center',
+				}}
+			>
+				{iconOnRight && (
+					<div className={classes.description} style={{ alignSelf: 'center' }}>
+						{description}
+					</div>
 				)}
-			</div>
-			<div className={classes.descriptionWrapper}>
-				<h4 className={classes.title}>{title}</h4>
-				<div className={classes.description}>{description}</div>
+				<div style={{ padding: 10, margin: 'auto' }}>
+					{isIconSVG ? (
+						<img
+							style={{ width: iconWidth, height: iconHeight, margin: 'auto' }}
+							src={props.icon}
+						/>
+					) : (
+						icon
+					)}
+				</div>
+				{!iconOnRight && (
+					<div className={classes.description} style={{ alignSelf: 'center' }}>
+						{description}
+					</div>
+				)}
 			</div>
 		</div>
 	);

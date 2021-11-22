@@ -22,7 +22,6 @@ import projectsStyle from 'assets/jss/material-kit-pro-react/views/sectionsSecti
 import Rellax from 'rellax';
 import cardProject2 from 'assets/img/examples/card-project2.jpg';
 import cardProject5 from 'assets/img/examples/card-project5.jpg';
-import writingAiImage from 'assets/novus/writingInTheAgeOfAI.png';
 import ResultMockDesktop from 'assets/learnip/result_mock.svg';
 import ResultMockMobile from 'assets/learnip/results_mockup_mobile.svg';
 import TurnipBaby from 'assets/learnip/turnip_baby.svg';
@@ -35,13 +34,14 @@ import HalfBrowserMockup from 'assets/learnip/half_browser_mockup.svg';
 import WaterDroplet from 'assets/learnip/water_droplet.svg';
 import WaterStop from 'assets/learnip/water_stop.svg';
 import Cloud from 'assets/learnip/cloud.svg';
-import Communication from 'assets/novus/Communication.png';
 const useStyles = makeStyles(projectsStyle);
-
+import './SectionProjects.css';
 export default function SectionProjects({ ...rest }) {
 	const classes = useStyles();
 	window.onload = function () {
-		var rellax = new Rellax('.rellax');
+		var rellax = new Rellax('.rellax', {
+			breakpoints: [576, 768, 1201],
+		});
 	};
 	return (
 		<div className="cd-section" {...rest}>
@@ -106,60 +106,31 @@ export default function SectionProjects({ ...rest }) {
 									justifyContent: 'center',
 								}}
 							>
-								<img
-									src={HalfBrowserMockup}
-									style={{
-										borderRadius: 15,
-										padding: 40,
-									}}
-								/>
+								<img className="mockup-img" src={HalfBrowserMockup} />
 							</GridItem>
 						</Grid>
 					</GridContainer>
+
 					<hr />
 					<img
-						className="rellax"
-						data-rellax-speed="7"
+						className="rellax lower-cloud-turnip"
+						data-rellax-speed="-3"
+						data-rellax-xs-speed="-2"
 						src={Cloud}
-						style={{
-							width: '8%',
-							maxWidth: 150,
-							minWidth: 75,
-							marginLeft: 'auto',
-							right: '0.6%',
-
-							position: 'absolute',
-						}}
 						data-rellax-zindex="-1"
 					/>
 					<img
-						className="rellax"
-						data-rellax-speed="4"
+						className="rellax falling-turnip"
+						data-rellax-speed="-5"
+						data-rellax-xs-speed="-4"
 						src={FallingTurnip}
-						style={{
-							width: '10%',
-							maxWidth: 200,
-							minWidth: 100,
-							marginLeft: 'auto',
-							marginTop: -200,
-							right: '5%',
-							position: 'absolute',
-						}}
 					/>
 
 					<img
-						className="rellax"
-						data-rellax-speed="10"
+						className="rellax higher-cloud-turnip"
+						data-rellax-speed="-2"
+						data-rellax-xs-speed="-2.5"
 						src={Cloud}
-						style={{
-							width: '10%',
-							maxWidth: 200,
-							minWidth: 100,
-							marginLeft: 'auto',
-							right: '11%',
-							marginTop: 400,
-							position: 'absolute',
-						}}
 					/>
 
 					<GridContainer>
@@ -188,9 +159,10 @@ export default function SectionProjects({ ...rest }) {
 										style={{
 											marginTop: window.innerWidth > 1250 ? 130 : 0,
 											margin: 'auto',
-											borderRadius: 5,
-											padding: 40,
+
+											width: '100%',
 										}}
+										className="mockup-img"
 										alt="Learnip Results Mockup Image"
 									/>
 								</GridItem>
@@ -240,43 +212,29 @@ export default function SectionProjects({ ...rest }) {
 											style={{
 												marginTop: window.innerWidth > 1250 ? 130 : 0,
 												margin: 'auto',
-												borderRadius: 5,
-												padding: 40,
+												width: '100%',
 											}}
+											className="mockup-img"
 											alt="Novus Writer Product Screenshot"
 										/>
 									</GridItem>
 								</Hidden>
 							</GridItem>
 						</Grid>
+
 						<img
-							className="rellax"
+							className="rellax water-cloud"
 							data-rellax-speed="2"
+							data-rellax-xs-speed="1"
 							src={Cloud}
-							style={{
-								width: '7%',
-								maxWidth: 150,
-								minWidth: 75,
-								marginLeft: 'auto',
-								left: '3%',
-								marginTop: 400,
-								position: 'absolute',
-							}}
-							data-rellax-zindex="-1"
 						/>
+
 						<img
-							className="rellax"
+							className="rellax super-water"
 							data-rellax-speed="10"
+							data-rellax-xs-speed="7"
 							src={WaterDroplet}
-							style={{
-								width: '10%',
-								maxWidth: 200,
-								minWidth: 100,
-								marginLeft: 'auto',
-								marginTop: 1500,
-								left: '5%',
-								position: 'absolute',
-							}}
+							data-rellax-zindex="1"
 						/>
 					</GridContainer>
 				</div>

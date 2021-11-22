@@ -32,7 +32,7 @@ function CustomFooter({ ...rest }) {
 									target="_blank"
 									className={classes.block}
 								>
-									Contact us
+									hello@learnip.co
 								</a>
 							</ListItem>
 						</List>

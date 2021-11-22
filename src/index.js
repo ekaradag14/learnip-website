@@ -20,7 +20,7 @@ import { createBrowserHistory } from 'history';
 import { Router, Route, Switch, Redirect } from 'react-router';
 
 // Context
-import GeneralContextProvider from 'context/GeneralContext';
+// import GeneralContextProvider from 'context/GeneralContext';
 
 // Pages
 import Home from 'pages/Home.js';
@@ -42,21 +42,19 @@ hist.listen((location, action) => {
 
 ReactDOM.render(
 	<Router history={hist}>
-		<GeneralContextProvider>
-			<Switch>
-				<Route exact path="/" component={Home} />
+		<Switch>
+			<Route exact path="/" component={Home} />
 
-				<Route exact path="/plans" component={Plans} />
-				<Route exact path="/payment" component={Payment} />
-				<Route exact path="/about" component={About} />
+			<Route exact path="/plans" component={Plans} />
+			<Route exact path="/payment" component={Payment} />
+			<Route exact path="/about" component={About} />
 
-				<Route exact path="/delivery-return" component={DeliveryReturn} />
-				<Route exact path="/privacy-security" component={PrivacySecurity} />
-				<Route path="*">
-					<Redirect to={'/'} />
-				</Route>
-			</Switch>
-		</GeneralContextProvider>
+			<Route exact path="/delivery-return" component={DeliveryReturn} />
+			<Route exact path="/privacy-security" component={PrivacySecurity} />
+			<Route path="*">
+				<Redirect to={'/'} />
+			</Route>
+		</Switch>
 	</Router>,
 	document.getElementById('root')
 );

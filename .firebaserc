@@ -1,18 +1,5 @@
 {
   "projects": {
-    "default": "novus-global"
-  },
-  "targets": {
-    "novus-global": {
-      "hosting": {
-        "admin": [
-          "novus-viewer"
-        ],
-          "rewrites": [ {
-           "source": "**",
-            "destination": "/index.html"
-           } ]
-      }
-    }
+    "default": "chrome-language-learn-ext"
   }
 }

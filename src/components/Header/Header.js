@@ -18,8 +18,6 @@ import Close from '@material-ui/icons/Close';
 // core components
 import styles from 'assets/jss/material-kit-pro-react/components/headerStyle.js';
 
-import NovusWriter from 'assets/novus/novusWriter.svg';
-
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
@@ -66,60 +64,64 @@ export default function Header(props) {
 		[classes.fixed]: fixed,
 	});
 	return (
-		<AppBar className={appBarClasses}>
-			<Toolbar
-				className={classes.container}
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					justifyContent: 'center',
-				}}
-			>
-				{false && (
-					<Button className={classes.title}>
-						<Link to="/">
-							<img src={NovusWriter}></img>
-						</Link>
-					</Button>
-				)}
-				<div className={classes.collapse}>
-					<div style={{ margin: 'auto', fontSize: 20 }}>
-						🎉 Install <b>Learnip</b> for your Chrome browser for free from{' '}
-						<a
-							href="https://www.google.com"
-							style={{ color: 'white', textDecoration: 'underline' }}
-						>
-							<b>here</b>
-						</a>
-						! 🎉
-					</div>
-				</div>
-				<Hidden smDown implementation="css" className={classes.hidden}>
-					<div className={classes.collapse}>{links}</div>
-				</Hidden>
-			</Toolbar>
-			<Hidden mdUp implementation="js">
-				<Drawer
-					variant="temporary"
-					anchor={'right'}
-					open={mobileOpen}
-					classes={{
-						paper: classes.drawerPaper,
+		<Hidden xsDown implementation="css">
+			<AppBar className={appBarClasses}>
+				<Toolbar
+					className={classes.container}
+					style={{
+						display: 'flex',
+						flexDirection: 'column',
+						justifyContent: 'center',
 					}}
-					onClose={handleDrawerToggle}
 				>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerToggle}
-						className={classes.closeButtonDrawer}
+					{false && (
+						<Button className={classes.title}>
+							<Link to="/">
+								<img src={NovusWriter}></img>
+							</Link>
+						</Button>
+					)}
+
+					<div className={classes.collapse}>
+						<div style={{ margin: 'auto', fontSize: 20 }}>
+							🎉 Install <b>Learnip</b> for your Chrome browser for free from{' '}
+							<a
+								href="https://www.google.com"
+								style={{ color: 'white', textDecoration: 'underline' }}
+							>
+								<b>here</b>
+							</a>
+							! 🎉
+						</div>
+					</div>
+
+					<Hidden smDown implementation="css" className={classes.hidden}>
+						<div className={classes.collapse}>{links}</div>
+					</Hidden>
+				</Toolbar>
+				<Hidden mdUp implementation="js">
+					<Drawer
+						variant="temporary"
+						anchor={'right'}
+						open={mobileOpen}
+						classes={{
+							paper: classes.drawerPaper,
+						}}
+						onClose={handleDrawerToggle}
 					>
-						<Close />
-					</IconButton>
-					<div className={classes.appResponsive}>{links}</div>
-				</Drawer>
-			</Hidden>
-		</AppBar>
+						<IconButton
+							color="inherit"
+							aria-label="open drawer"
+							onClick={handleDrawerToggle}
+							className={classes.closeButtonDrawer}
+						>
+							<Close />
+						</IconButton>
+						<div className={classes.appResponsive}>{links}</div>
+					</Drawer>
+				</Hidden>
+			</AppBar>
+		</Hidden>
 	);
 }
 

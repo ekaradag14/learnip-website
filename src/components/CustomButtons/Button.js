@@ -46,7 +46,12 @@ const RegularButton = React.forwardRef((props, ref) => {
 	});
 	return (
 		<>
-			<Button {...rest} ref={ref} className={btnClasses}>
+			<Button
+				style={isLoading ? { backgroundColor: 'gray' } : {}}
+				{...rest}
+				ref={ref}
+				className={btnClasses}
+			>
 				{children}
 			</Button>
 
@@ -58,6 +63,7 @@ const RegularButton = React.forwardRef((props, ref) => {
 						position: 'absolute',
 						left: '42%',
 						top: '20%',
+						color: 'purple',
 					}}
 				/>
 			)}

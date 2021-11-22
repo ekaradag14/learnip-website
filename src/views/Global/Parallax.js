@@ -9,7 +9,6 @@ import { Grid } from '@material-ui/core';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 import Parallax from 'components/Parallax/Parallax.js';
-import ShowcaseGif from 'assets/novus/main-product-showcase.gif';
 import HappyTurnip from 'assets/learnip/happy_turnip.svg';
 import headersStyle from 'assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js';
 

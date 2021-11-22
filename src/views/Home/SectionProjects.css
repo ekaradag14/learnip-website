@@ -1,0 +1,75 @@
+.higher-cloud-turnip {
+	width: 10%;
+	max-width: 200px;
+	min-width: 100px;
+	margin-left: auto;
+	right: 11%;
+	top: 300px;
+	position: absolute;
+	z-index: 10;
+}
+.falling-turnip {
+	width: 10%;
+	max-width: 200px;
+	min-width: 100px;
+	margin-left: auto;
+	top: 50px;
+	right: 5%;
+	position: absolute;
+	z-index: 9;
+}
+.lower-cloud-turnip {
+	width: 8%;
+	max-width: 150px;
+	min-width: 75px;
+	margin-left: auto;
+	right: 0.6%;
+	top: 400px;
+	position: absolute;
+	z-index: 8;
+}
+.water-cloud {
+	width: 7%;
+	max-width: 150px;
+	min-width: 75px;
+	left: 3%;
+	bottom: 100px;
+	position: absolute;
+}
+.super-water {
+	width: 10%;
+	max-width: 200px;
+	min-width: 100px;
+	left: 5%;
+	bottom: -1200px;
+	position: absolute;
+}
+.mockup-img {
+	border-radius: 15px;
+	padding: 40px;
+}
+
+@media (max-width: 600px) {
+	.higher-cloud-turnip {
+		top: 300px;
+		right: 5%;
+	}
+	.mockup-img {
+		padding: 10px;
+	}
+	.lower-cloud-turnip {
+		top: 370px;
+		display: none;
+	}
+	.falling-turnip {
+		top: 50px;
+		right: -3%;
+	}
+	.super-water {
+		bottom: -2100px;
+		left: -8%;
+	}
+	.water-cloud {
+		bottom: -150px;
+	}
+}

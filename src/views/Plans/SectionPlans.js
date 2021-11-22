@@ -4,7 +4,7 @@ import queryString from 'query-string';
 
 import { GeneralContext } from 'context/GeneralContext';
 
-import { getPayingInfo } from '../../api/api';
+// import { getPayingInfo } from '../../api/api';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';

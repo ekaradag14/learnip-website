@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { addContactAPI } from 'api/api';
+// import { addContactAPI } from 'api/api';
 
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
@@ -46,9 +46,6 @@ export default function SectionContacts({ ...rest }) {
 		}
 		let formData = form;
 
-		const mailTemplate =
-			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 		if (!mailTemplate.test(String(formData?.mail ?? '').toLowerCase())) {
 			setError('It must conform to the mail format');
 			return;
@@ -82,7 +79,6 @@ export default function SectionContacts({ ...rest }) {
 				}}
 			>
 				<div className={classes.container}>
-					{' '}
 					<CampaignBar />
 				</div>
 			</div>

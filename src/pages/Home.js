@@ -18,13 +18,6 @@ const useStyles = makeStyles(presentationStyle);
 function Home({ location }) {
 	const classes = useStyles();
 
-	React.useEffect(() => {
-		if (location?.state?.scrollTo === 'contact-us') {
-			document
-				?.querySelector('#contact-us')
-				?.scrollIntoView({ behavior: 'smooth' });
-		}
-	}, []);
 	return (
 		<div>
 			<Header

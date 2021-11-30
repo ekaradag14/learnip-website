@@ -1,7 +1,7 @@
 import secureAxios from './secureAxios';
 
-export const earlyAdapterAPI = (mail) => {
-	return secureAxios(null).post('/early-adapter', { mail });
+export const earlyAdapterAPI = (email) => {
+	return secureAxios(null).post('/early-adapter', { email });
 };
 
 // export const getFormAPI = (formData) => {

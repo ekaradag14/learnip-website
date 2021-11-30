@@ -7,7 +7,7 @@ import Carousel from 'react-slick';
 import { makeStyles } from '@material-ui/core/styles';
 import { earlyAdapterAPI } from 'api/api';
 // core components
-
+import './CampaignBar.css';
 import Button from 'components/CustomButtons/Button.js';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
@@ -108,12 +108,11 @@ export default function CampaignBar() {
 								<GridItem xs={12} sm={5} md={5}>
 									<Button
 										block
-										style={{ marginTop: 20 }}
 										color="primary"
 										disabled={mailLoading}
 										isLoading={mailLoading}
 										onClick={onSubmit}
-										className={classes.signupButton}
+										className="signup-button"
 									>
 										Sign up
 									</Button>

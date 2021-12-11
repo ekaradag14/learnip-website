@@ -36,6 +36,7 @@ const useStyles = makeStyles(presentationStyle);
 function Home() {
 	const classes = useStyles();
 	const backgrounds = [
+		fields,
 		lake_1_afternoon,
 		home_night,
 		balloons_morning,

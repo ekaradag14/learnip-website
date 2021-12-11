@@ -13,10 +13,10 @@ import CampaignBar from 'components/CampaignBar/CampaignBar.js';
 import contactsStyle from 'assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js';
 
 import city from 'assets/img/examples/city.jpg';
-import fields from 'assets/learnip/fields.svg';
+
 const useStyles = makeStyles(contactsStyle);
 
-export default function SectionContacts({ ...rest }) {
+export default function SectionContacts({ backgroundImage, ...rest }) {
 	const classes = useStyles();
 
 	const [checked, setChecked] = useState(false);
@@ -74,7 +74,7 @@ export default function SectionContacts({ ...rest }) {
 			<div
 				className={classes.contacts + ' ' + classes.section}
 				style={{
-					backgroundImage: `url(${fields})`,
+					backgroundImage: `url(${backgroundImage})`,
 					backgroundPosition: 'bottom',
 				}}
 			>

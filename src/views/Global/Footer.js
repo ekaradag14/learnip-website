@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,9 +13,21 @@ import styles from 'assets/jss/material-kit-pro-react/views/componentsSections/f
 import aboutUsStyle from 'assets/jss/material-kit-pro-react/views/aboutUsStyle.js';
 const useStyles2 = makeStyles(aboutUsStyle);
 const useStyles = makeStyles(styles);
+import './Footer.css';
+import { Hidden } from '@material-ui/core';
 function CustomFooter({ ...rest }) {
 	const classes = useStyles();
 
+	useEffect(() => {
+		const script = document.createElement('script');
+
+		script.type = 'text/javascript';
+		script.innerHTML =
+			'!function(e,t){var n=function(){var e=t.createElement("script"),n=t.getElementsByTagName("script")[0];e.src="https://cdn.iubenda.com/iubenda.js",n.parentNode.insertBefore(e,n)};e.addEventListener?e.addEventListener("load",n,!1):e.attachEvent?e.attachEvent("onload",n):e.onload=n}(window,document);';
+		script.async = true;
+
+		if (document.body != null) document.body.appendChild(script);
+	}, []);
 	return (
 		<Footer
 			theme="dark"
@@ -37,6 +49,18 @@ function CustomFooter({ ...rest }) {
 							</ListItem>
 						</List>
 					</div>
+					<Hidden smDown>
+						<div className={classes.right}>
+							<a
+								id="privacy-policy"
+								href="https://www.iubenda.com/privacy-policy/12732146"
+								className="iubenda-white iubenda-embed iubenda-noiframe iubenda-noiframe "
+								title="Privacy Policy"
+							>
+								Privacy Policy
+							</a>
+						</div>
+					</Hidden>
 				</div>
 			}
 		/>

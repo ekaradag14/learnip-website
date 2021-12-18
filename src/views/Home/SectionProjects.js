@@ -70,7 +70,7 @@ export default function SectionProjects({ ...rest }) {
 									iconHeight="70px"
 									icon={RocketTurnip}
 									title="Study at Your Own Pace"
-									description="Set the pace you want to learn and keep it."
+									description="Can't wait to speak with natives? Or taking your time while tasting the local cuisine. Set the pace works best and start learning right away!"
 									iconColor="rose"
 								/>
 								<InfoArea
@@ -81,7 +81,7 @@ export default function SectionProjects({ ...rest }) {
 									iconOnRight
 									icon={WaterFlags}
 									title="Choose Languages"
-									description="Choose from many languages provided (More to come) and start learning right away. Become a turnipster to practice multiple languages at once."
+									description="Spanish? Russian? Ancient Greek? Well maybe not Ancient Greek, but choose from many languages Learnip offers to practice. Become a turnipster to practice multiple languages at once."
 									iconColor="success"
 								/>
 								<InfoArea
@@ -91,7 +91,7 @@ export default function SectionProjects({ ...rest }) {
 									iconWidth="70px"
 									iconHeight="70px"
 									icon={TurnipBaby}
-									description="Every creator has their own unique style. After a few articles, our models adapt to your writing style by using the latest advancements in AI. Yes, AI is going to write stories like you do."
+									description="With your every droplet collected your Learnip will grow bigger everyday. "
 									icon={TurnipBaby}
 									iconColor="info"
 								/>
@@ -174,7 +174,7 @@ export default function SectionProjects({ ...rest }) {
 									isIconSVG
 									iconWidth="70px"
 									iconHeight="70px"
-									description="Using truly digital marketing by simply describing the product in a sentence and with some keywords, enabled by Novus AI technologies."
+									description="You will find your Super Droplets all over the internet hidden somewhere. Every page will feel like christmas."
 									icon={WaterSearch}
 									iconColor="info"
 								/>
@@ -185,7 +185,7 @@ export default function SectionProjects({ ...rest }) {
 									iconWidth="70px"
 									iconHeight="70px"
 									iconOnRight
-									description="In seconds related to the firm's field. Just input your area of interests and wait for proposed outlines or new ideas. Variety of blog contents related with your input is right there in seconds. "
+									description="Learnip will detect your language automatically so that you don't have to worry about that. "
 									icon={TurnipCool}
 									iconColor="primary"
 								/>
@@ -195,8 +195,7 @@ export default function SectionProjects({ ...rest }) {
 									isIconSVG
 									iconWidth="70px"
 									iconHeight="70px"
-									description="We help content creators to increase their precision by making relevant information on the web instantly accessible through suggesting informative paragraphs while they write.
-"
+									description="We get it, everybody needs space sometimes. You can disable Learnip when you have things to do and need absolute focus"
 									icon={WaterStop}
 									iconColor="danger"
 								/>
